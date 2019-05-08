@@ -12,7 +12,7 @@ class MixinMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'make:vue-mixin';
+    protected $name = 'make:vue-mixin {--empty}';
 
     /**
      * The console command description.
@@ -35,7 +35,9 @@ class MixinMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return config('vue-generators.mixin_stub', __DIR__.'/../stubs/mixin.stub');
+         $fileName = $this->option('empty') ? 'EmptyMixin' : 'mixin';
+    
+        return config('vue-generators.mixin_stub', __DIR__.'/../stubs/'.$fileName.'.stub');
     }
 
     /**
