@@ -1,4 +1,4 @@
-# Laravel Vue Generators
+# Laravel Vue Generators (fork from Beckenrode\VueGenerators)
 
 [![StyleCI](https://styleci.io/repos/101144603/shield?branch=master)](https://styleci.io/repos/101144603)
 
@@ -12,7 +12,7 @@ This Laravel package provides the following two generators to speed up your Vue 
 ### Step 1: Install Through Composer
 
 ```bash
-composer require beckenrode/vue-generator
+composer require laminblur/vue-generate
 ```
 
 ### Step 2: Add the Service Provider
@@ -24,7 +24,7 @@ Laravel's <a href="https://laravel.com/docs/5.5/packages#package-discovery" targ
 Open `config/app.php`, and add a new item to the Package Service Providers array.
 
 ```php
-Beckenrode\VueGenerators\VueGeneratorsServiceProvider::class,
+Laminblur\VueGenerate\VueGeneratorsServiceProvider::class,
 ```
 
 ### Step 3: Configuration (Optional)
@@ -38,7 +38,7 @@ php artisan vendor:publish
 
 #### Laravel < 5.5
 ```bash
-php artisan vendor:publish --provider="Beckenrode\VueGenerators\VueGeneratorsServiceProvider"
+php artisan vendor:publish --provider="Laminblur\VueGenerate\VueGenerateServiceProvider"
 ```
 
 This will publish the following configuration file to `config/vue-generators.php`:
