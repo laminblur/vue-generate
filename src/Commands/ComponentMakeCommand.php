@@ -35,7 +35,7 @@ class ComponentMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        $fileName = $this->option('empty') ? 'EmptyComponent' : 'Component';
+        $fileName = $this->option('empty') ? 'EmptyComponent' : 'component';
         
         return config('vue-generators.component_stub', __DIR__.'/../stubs/'.$fileName.'.stub');
     }
