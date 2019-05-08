@@ -1,5 +1,5 @@
 {
-    "name": "beckenrode/vue-generators",
+    "name": "laminblur/vue-generate",
     "description": "Laravel Vue Generators",
     "keywords": ["laravel", "vue", "generators", "laravel-5-package", "laravel-generator", "laravel-artisan-command"],
     "require": {
@@ -10,19 +10,19 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Brandon Eckenrode",
-            "email": "beckenrode@gmail.com"
+            "name": "lamin",
+            "email": "laminblur@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Beckenrode\\VueGenerators\\": "src/"
+            "Laminblur\\VueGenerate\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Beckenrode\\VueGenerators\\VueGeneratorsServiceProvider"
+                "Laminblur\\VueGenerate\\VueGenerateServiceProvider"
             ]
         }
     }
