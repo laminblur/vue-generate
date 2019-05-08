@@ -1,10 +1,10 @@
 <?php
 
-namespace Beckenrode\VueGenerators;
+namespace Laminblur\VueGenerate;
 
 use Illuminate\Support\ServiceProvider;
 
-class VueGeneratorsServiceProvider extends ServiceProvider
+class VueGenerateServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -39,7 +39,7 @@ class VueGeneratorsServiceProvider extends ServiceProvider
     private function registerComponentGenerator()
     {
         $this->app->singleton('command.vuegenerator.component', function ($app) {
-            return $app['Beckenrode\VueGenerators\Commands\ComponentMakeCommand'];
+            return $app['Laminblur\VueGenerate\Commands\ComponentMakeCommand'];
         });
         $this->commands('command.vuegenerator.component');
     }
@@ -50,7 +50,7 @@ class VueGeneratorsServiceProvider extends ServiceProvider
     private function registerMixinGenerator()
     {
         $this->app->singleton('command.vuegenerator.mixin', function ($app) {
-            return $app['Beckenrode\VueGenerators\Commands\MixinMakeCommand'];
+            return $app['Laminblur\VueGenerate\Commands\MixinMakeCommand'];
         });
         $this->commands('command.vuegenerator.mixin');
     }
