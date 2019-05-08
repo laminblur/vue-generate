@@ -24,7 +24,7 @@ Laravel's <a href="https://laravel.com/docs/5.5/packages#package-discovery" targ
 Open `config/app.php`, and add a new item to the Package Service Providers array.
 
 ```php
-Laminblur\VueGenerate\VueGeneratorsServiceProvider::class,
+Laminblur\VueGenerate\VueGenerateServiceProvider::class,
 ```
 
 ### Step 3: Configuration (Optional)
