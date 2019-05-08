@@ -12,22 +12,19 @@ class ComponentMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'make:vue-component {--empty}';
-
+    protected $name = 'make:vue-component';
     /**
      * The console command description.
      *
      * @var string
      */
     protected $description = 'Create a new Vue component file';
-
     /**
      * The type of class being generated.
      *
      * @var string
      */
     protected $type = 'Vue Component';
-
     /**
      * Get the stub file for the generator.
      *
@@ -35,11 +32,8 @@ class ComponentMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        $fileName = $this->option('empty') ? 'EmptyComponent' : 'component';
-        
-        return config('vue-generators.component_stub', __DIR__.'/../stubs/'.$fileName.'.stub');
+        return config('vue-generators.component_stub', __DIR__.'/../stubs/component.stub');
     }
-
     /**
      * Build the class with the given name.
      *
@@ -51,7 +45,6 @@ class ComponentMakeCommand extends GeneratorCommand
     {
         return $this->files->get($this->getStub());
     }
-
     /**
      * Get the destination class path.
      *
