@@ -1,6 +1,6 @@
 <?php
 
-namespace Beckenrode\VueGenerators\Commands;
+namespace Laminblur\VueGenerate\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
