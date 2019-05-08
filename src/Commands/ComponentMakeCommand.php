@@ -12,7 +12,7 @@ class ComponentMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'make:vue-component';
+    protected $name = 'make:vue-component {--empty}';
 
     /**
      * The console command description.
@@ -35,7 +35,9 @@ class ComponentMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return config('vue-generators.component_stub', __DIR__.'/../stubs/component.stub');
+        $fileName = $this->option('empty') ? 'EmptyComponent' : 'Component';
+        
+        return config('vue-generators.component_stub', __DIR__.'/../stubs/'.$fileName.'.stub');
     }
 
     /**
